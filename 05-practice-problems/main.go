@@ -5,14 +5,14 @@ import (
 	"os"
 	"strings"
 
-	arrayEasy "dsa-practice-problems/arrays-strings/easy"
-	arrayMedium "dsa-practice-problems/arrays-strings/medium"
-	backtrackmedium "dsa-practice-problems/backtracking/medium"
-	dsEasy "dsa-practice-problems/data-structures/easy"
-	dsMedium "dsa-practice-problems/data-structures/medium"
-	dpeasy "dsa-practice-problems/dynamic-programming/easy"
-	dpmedium "dsa-practice-problems/dynamic-programming/medium"
-	graphEasy "dsa-practice-problems/graphs/easy"
+	arrayEasy "dsa-mastery/05-practice-problems/arrays-strings/easy"
+	arrayMedium "dsa-mastery/05-practice-problems/arrays-strings/medium"
+	backtrackmedium "dsa-mastery/05-practice-problems/backtracking/medium"
+	dsEasy "dsa-mastery/05-practice-problems/data-structures/easy"
+	dsMedium "dsa-mastery/05-practice-problems/data-structures/medium"
+	dpeasy "dsa-mastery/05-practice-problems/dynamic-programming/easy"
+	dpmedium "dsa-mastery/05-practice-problems/dynamic-programming/medium"
+	graphEasy "dsa-mastery/05-practice-problems/graphs/easy"
 )
 
 func main() {
