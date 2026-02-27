@@ -31,6 +31,7 @@ Sequential data structures where elements have a linear relationship - each elem
 - **SinglyLinkedList**: Basic linked list with forward traversal
 - **DoublyLinkedList**: Bidirectional linked list
 - **CircularLinkedList**: Circular linked list for round-robin algorithms
+- **GenericLinkedList**: Type-safe generic linked list
 - **Features**: Cycle detection, list reversal, middle element finding
 - **Time Complexity**: O(1) insert/delete at known position, O(n) search
 
@@ -39,7 +40,13 @@ Sequential data structures where elements have a linear relationship - each elem
 Each structure has comprehensive tests in:
 - `linear_test.go`: Tests for arrays and stacks
 - `linked_list_test.go`: Tests for all linked list variants
-- `queue_linkedlist_test.go`: Additional queue-specific tests
+- `queue_linkedlist_test.go`: Queue implementations and linked list applications (reverse, middle, cycle detection)
+
+### How to run (from repo root)
+```bash
+go test ./02-data-structures/linear/ -v
+go test ./02-data-structures/linear/ -bench=. -benchmem
+```
 
 ### Test Coverage:
 - ✅ Basic operations (insert, delete, search)

@@ -2,6 +2,38 @@
 
 This module covers the implementation and analysis of data structures in Go, organized by their fundamental properties and characteristics.
 
+## 📁 Module Structure
+
+```
+02-data-structures/
+├── README.md                 # This file
+├── linear/                   # Sequential data structures
+│   ├── README.md
+│   ├── arrays.go             # DynamicArray, GenericDynamicArray
+│   ├── stack.go              # ArrayStack, LinkedStack, SafeStack, GenericStack
+│   ├── queue.go              # ArrayQueue, DynamicArrayQueue, LinkedQueue, PriorityQueue, ChannelQueue, GenericQueue, SafeQueue
+│   ├── linked_list.go        # Singly, Doubly, Circular, GenericLinkedList
+│   ├── linear_test.go        # Tests for arrays and stacks
+│   ├── linked_list_test.go   # Tests for linked lists
+│   └── queue_linkedlist_test.go  # Tests for queues and linked list apps
+└── non-linear/               # Hierarchical data structures
+    ├── README.md
+    ├── tree.go               # BinaryTree, BinarySearchTree, MinHeap, GenericBST
+    └── tree_test.go          # Tests for BST, heap, binary tree
+```
+
+## 🧪 How to Verify
+
+From the **repository root**:
+
+```bash
+# Run all data structure tests
+go test ./02-data-structures/linear/ ./02-data-structures/non-linear/ -v
+
+# Run with benchmarks
+go test ./02-data-structures/linear/ ./02-data-structures/non-linear/ -bench=. -benchmem
+```
+
 ## 📚 Organization
 
 ### Linear Data Structures (`/linear`)
@@ -39,7 +71,7 @@ Each data structure includes:
 ## 🚀 Go-Specific Features
 
 - **Interface-based Design**: Clean abstractions and polymorphism
-- **Generic Implementations**: Type-safe collections using Go 1.21+ generics
+- **Generic Implementations**: Type-safe collections using Go 1.24+ generics
 - **Memory Efficiency**: Zero-allocation techniques where possible
 - **Concurrent Safety**: Mutex-protected versions for multi-threaded access
 - **Channel Integration**: Go-idiomatic implementations using channels

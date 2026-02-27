@@ -36,6 +36,12 @@ Comprehensive test coverage in `tree_test.go`:
 - **TestMinHeap**: Heap property validation and operations
 - **TestBinaryTree**: Basic tree operations and traversals
 
+### How to run (from repo root)
+```bash
+go test ./02-data-structures/non-linear/ -v
+go test ./02-data-structures/non-linear/ -bench=. -benchmem
+```
+
 ### Test Coverage:
 - ✅ Basic operations (insert, delete, search, extract)
 - ✅ Tree traversals (all four types)
