@@ -2,6 +2,21 @@
 
 This module provides comprehensive implementations of fundamental graph algorithms in Go, including graph data structures, traversal algorithms, shortest path algorithms, and minimum spanning tree algorithms.
 
+## Module files
+
+- `graph.go` – Graph interface, adjacency list, vertex/edge operations
+- `traversal.go` – DFS, BFS
+- `shortest_path.go` – Dijkstra
+- `mst.go` – Kruskal, Prim, Union-Find
+- `graph_test.go`, `mst_test.go` – Tests and benchmarks
+
+## How to verify (from repo root)
+
+```bash
+go test ./03-algorithms/graphs/ -v
+go test ./03-algorithms/graphs/ -bench=. -benchmem
+```
+
 ## Features
 
 ### Graph Data Structures
@@ -197,19 +212,12 @@ BenchmarkUnionFind/Find-11       45938143    26.28 ns/op       0 B/op      0 all
 
 ## Testing
 
-Run all tests:
-```bash
-go test -v
-```
+Run from **repository root**:
 
-Run benchmarks:
 ```bash
-go test -bench=. -benchmem
-```
-
-Run specific test:
-```bash
-go test -run TestDFS -v
+go test ./03-algorithms/graphs/ -v
+go test ./03-algorithms/graphs/ -bench=. -benchmem
+go test ./03-algorithms/graphs/ -run TestDFS -v
 ```
 
 ## Implementation Notes

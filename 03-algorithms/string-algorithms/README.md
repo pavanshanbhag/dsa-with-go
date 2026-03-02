@@ -2,6 +2,21 @@
 
 A comprehensive implementation of string processing and pattern matching algorithms in Go, designed for educational purposes and practical applications.
 
+## Module files
+
+- `string_algorithms.go` – KMP, Rabin-Karp, Boyer-Moore, Z-algorithm, Naive search, Trie, rolling hash, Manacher, LCP, utilities
+- `string_algorithms_test.go` – Tests and benchmarks
+
+## How to verify (from repo root)
+
+```bash
+go test ./03-algorithms/string-algorithms/ -v
+go test ./03-algorithms/string-algorithms/ -bench=.
+go test ./03-algorithms/string-algorithms/ -run=TestLarge
+```
+
+**Note:** The package name is `string_algorithms`. Import as `"dsa-mastery/03-algorithms/string-algorithms"`.
+
 ## 📚 Overview
 
 String algorithms are fundamental in computer science, powering everything from text editors and search engines to bioinformatics and data compression. This module implements the most important string algorithms with optimal time and space complexity.
@@ -304,19 +319,12 @@ func main() {
 
 ## 🧪 Testing
 
-Run the comprehensive test suite:
-```bash
-go test -v ./string-algorithms
-```
+Run from **repository root**:
 
-Run performance benchmarks:
 ```bash
-go test -bench=. ./string-algorithms
-```
-
-Run stress tests:
-```bash
-go test -run=TestLarge ./string-algorithms
+go test ./03-algorithms/string-algorithms/ -v
+go test ./03-algorithms/string-algorithms/ -bench=.
+go test ./03-algorithms/string-algorithms/ -run=TestLarge
 ```
 
 ## 📈 Performance Tips

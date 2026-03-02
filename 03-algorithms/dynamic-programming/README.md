@@ -2,6 +2,20 @@
 
 This module provides a comprehensive implementation of Dynamic Programming algorithms in Go, designed to master the optimization technique for solving complex problems by breaking them into overlapping subproblems.
 
+## Module files
+
+- `dp.go` – Fibonacci, Knapsack (0/1, unbounded), LCS, LIS, Edit Distance, Coin Change, Matrix Chain, Palindrome problems
+- `dp_test.go` – Tests and benchmarks
+
+## How to verify (from repo root)
+
+```bash
+go test ./03-algorithms/dynamic-programming/ -v
+go test ./03-algorithms/dynamic-programming/ -bench=. -benchmem
+```
+
+**Note:** The package name is `dp`. Import as `"dsa-mastery/03-algorithms/dynamic-programming"` and use with the `dp` package identifier.
+
 ## 📋 Table of Contents
 
 - [What is Dynamic Programming?](#what-is-dynamic-programming)

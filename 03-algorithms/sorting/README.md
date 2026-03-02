@@ -2,6 +2,19 @@
 
 This module provides a comprehensive collection of sorting algorithms implemented in Go, designed for educational purposes and practical use in understanding algorithmic complexity and performance characteristics.
 
+## Module files
+
+- `sorting.go` – All sorting implementations (QuickSort, MergeSort, HeapSort, CountingSort, RadixSort, BucketSort, IntroSort, etc.) and utilities
+- `sorting_test.go` – Tests and benchmarks
+
+## How to verify (from repo root)
+
+```bash
+go test ./03-algorithms/sorting/ -v
+go test ./03-algorithms/sorting/ -bench=. -benchmem
+go test ./03-algorithms/sorting/ -cover
+```
+
 ## 📋 Table of Contents
 
 - [Implemented Algorithms](#implemented-algorithms)
@@ -262,11 +275,12 @@ The module includes extensive test coverage:
 - **Property Tests**: Verify sorting correctness and stability
 - **Performance Tests**: Benchmark comparisons
 
-Run tests:
+Run tests from **repository root**:
+
 ```bash
-go test -v                    # Run all tests
-go test -bench=.             # Run benchmarks
-go test -cover               # Check test coverage
+go test ./03-algorithms/sorting/ -v
+go test ./03-algorithms/sorting/ -bench=.
+go test ./03-algorithms/sorting/ -cover
 ```
 
 ### Test Categories

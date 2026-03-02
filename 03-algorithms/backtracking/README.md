@@ -2,6 +2,24 @@
 
 A comprehensive implementation of backtracking algorithms for solving constraint satisfaction problems and combinatorial optimization challenges.
 
+## Module files
+
+- `backtracking.go` – N-Queens, Sudoku, Permutations, Combinations, Subsets, Graph Coloring, Maze, Knight's Tour, Word Break
+- `backtracking_test.go` – Tests and benchmarks
+
+## How to verify (from repo root)
+
+```bash
+go test ./03-algorithms/backtracking/ -v
+go test ./03-algorithms/backtracking/ -bench=. -benchmem
+```
+
+For interactive demos (N-Queens, Sudoku, etc.), run:
+
+```bash
+go run examples/backtracking/main.go
+```
+
 ## Overview
 
 Backtracking is a systematic method for solving problems by incrementally building solutions and abandoning ("backtracking") partial solutions that cannot lead to valid complete solutions. This approach is particularly effective for constraint satisfaction problems, combinatorial enumeration, and optimization challenges.
@@ -292,6 +310,13 @@ Where:
 
 ## Testing Strategy
 
+Run from **repository root**:
+
+```bash
+go test ./03-algorithms/backtracking/ -v
+go test ./03-algorithms/backtracking/ -bench=. -benchmem
+```
+
 Our test suite includes:
 - **Correctness**: Verify solutions meet all constraints
 - **Completeness**: Test edge cases and boundary conditions
@@ -300,11 +325,13 @@ Our test suite includes:
 
 ## Usage Examples
 
-See the `demo` directory for comprehensive examples of each algorithm in action, including:
-- Interactive problem solving
-- Performance comparisons
-- Visualization of solution processes
-- Real-world problem applications
+Run the backtracking examples from the **repository root**:
+
+```bash
+go run examples/backtracking/main.go
+```
+
+The examples include N-Queens, Sudoku, combinatorial generation, and other demos.
 
 ## References
 
