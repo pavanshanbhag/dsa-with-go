@@ -63,32 +63,54 @@ This module assumes mastery of:
 
 ## 📁 Module Structure
 
+**Actual layout** (what exists in the repo):
+
 ```
 04-advanced-topics/
-├── search/                    # Advanced search algorithms
-│   ├── binary_search_variants.go
-│   ├── ternary_search.go
-│   ├── exponential_search.go
-│   └── interpolation_search.go
-├── number-theory/             # Number theory algorithms
-│   ├── primes.go             # Prime generation and testing
-│   ├── modular.go            # Modular arithmetic operations
-│   ├── gcd.go                # GCD and related algorithms
-│   └── factorization.go      # Number factorization
-├── optimization/              # Mathematical optimization
-│   ├── linear_search.go      # 1D optimization methods
-│   ├── root_finding.go       # Equation solving
-│   └── numerical.go          # Numerical methods
-├── data-structures/           # Advanced query structures
-│   ├── segment_tree.go       # Range query trees
-│   ├── fenwick_tree.go       # Binary indexed trees
-│   └── sparse_table.go       # Static range queries
-├── examples/                  # Comprehensive examples
-│   ├── cryptography/         # RSA, hashing applications
-│   ├── competitive/          # Contest problem solutions
-│   └── scientific/           # Mathematical applications
-└── README.md                 # This overview
+├── README.md
+├── MODULE_SUMMARY.md
+├── search/                         # Advanced search algorithms
+│   ├── binary_search_variants.go   # Classic, lower/upper bound, rotated, range, exponential, interpolation, ternary
+│   └── binary_search_variants_test.go
+├── number-theory/                  # Number theory algorithms
+│   ├── primes.go                  # Sieve, primality, modular arithmetic, GCD, factorization, CRT, etc.
+│   └── primes_test.go
+└── optimization/                  # Mathematical optimization
+    ├── numerical_methods.go       # Golden section, ternary, bisection, Newton-Raphson, etc.
+    └── numerical_methods_test.go  # Tests for GoldenSection, TernarySearch, Bisection
 ```
+
+**Note:** The README below describes additional planned topics (e.g. segment trees, more files). The table above reflects the current implementation. All three packages (search, number-theory, optimization) now have tests. The example uses `search` and `number_theory` only.
+
+## How to verify (from repo root)
+
+```bash
+# Run tests (all three packages have tests)
+go test ./04-advanced-topics/number-theory/ ./04-advanced-topics/search/ ./04-advanced-topics/optimization/ -v
+
+# Benchmarks
+go test ./04-advanced-topics/number-theory/ ./04-advanced-topics/search/ ./04-advanced-topics/optimization/ -bench=. -benchmem
+```
+
+## Running the example
+
+```bash
+go run examples/advanced-topics/main.go
+```
+
+This runs demos for advanced search, number theory, mathematical optimization (using search’s ternary + inline demos), performance analysis, and real-world applications.
+
+## Completeness checklist
+
+| Item | Status |
+|------|--------|
+| Tests | ✅ number-theory, ✅ search, ✅ optimization |
+| Example runner | ✅ `examples/advanced-topics/main.go` (uses search + number_theory) |
+| README per subfolder | ❌ search/number-theory/optimization have no READMEs; parent README describes content |
+
+---
+
+## 🏆 Real-World Applications
 
 ## 🏆 Real-World Applications
 
