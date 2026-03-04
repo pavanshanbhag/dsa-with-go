@@ -153,7 +153,7 @@ Tackle research-level problems and real-world system challenges.
 - ✅ **Test Cases** covering edge cases and large inputs
 - ✅ **Interview Preparation** with explanation and optimization tips
 
-## � **Quick Start**
+## 📖 **Quick Start**
 
 ### Run by Category
 ```bash
@@ -194,36 +194,51 @@ go run main.go backtrack-medium
 ## 📁 **Module Structure**
 
 ```
-05-practice-problems/
-├── arrays-strings/           # Array and string manipulation
-│   ├── easy/                # Foundation problems (10)
-│   └── medium/               # Algorithmic challenges (10)
-├── data-structures/          # Data structure applications
-│   ├── easy/                # Basic DS problems (10)
-│   └── medium/               # Advanced DS problems (10)
-├── graphs/                   # Graph algorithm applications
-│   └── easy/                # Graph fundamentals (10)
-├── dynamic-programming/      # DP problem variations
-│   ├── easy/                # Classic DP patterns (10)
-│   └── medium/               # Advanced DP (10)
-├── backtracking/             # Constraint satisfaction
-│   └── medium/               # Exploration problems (10)
-├── main.go                   # Interactive CLI runner
-└── README.md                 # This comprehensive guide
+05-practice-problems/          # Separate Go module (go.mod: dsa-practice-problems)
+├── main.go                    # CLI runner: go run main.go <command>
+├── go.mod
+├── README.md
+├── stacks-and-arrays.md       # Optional learning guide
+├── arrays-strings/
+│   ├── easy/                  # problems.go, problems_test.go ✅
+│   └── medium/                # problems.go (no test file)
+├── data-structures/
+│   ├── easy/                  # problems.go (no test file)
+│   └── medium/                # problems.go (no test file)
+├── graphs/
+│   └── easy/                  # problems.go (no test file)
+├── dynamic-programming/
+│   ├── easy/                  # problems.go (no test file)
+│   └── medium/                # problems.go (no test file)
+└── backtracking/
+    └── medium/                # problems.go (no test file)
 ```
-│   ├── combinatorial/        # Permutation/combination
-│   ├── games/                # Game theory applications
-│   └── optimization/         # Search space pruning
-├── advanced/                 # Advanced algorithm applications
-│   ├── number-theory/        # Mathematical problems
-│   ├── search/               # Search optimization
-│   └── geometry/             # Computational geometry
-├── competitive/              # Contest-style problems
-│   ├── contests/             # Real contest problems
-│   ├── company/              # Company interview questions
-│   └── challenges/           # Algorithm challenges
-└── README.md                 # This overview
+
+**Important:** This folder is a **separate Go module**. Run all commands from **inside** `05-practice-problems/` (e.g. `cd 05-practice-problems` first).
+
+## How to verify (from 05-practice-problems/)
+
+```bash
+cd 05-practice-problems
+
+# Run tests (only arrays-strings/easy has *_test.go)
+go test ./... -v
+
+# Run the CLI demo (any category)
+go run main.go arrays-easy
+go run main.go dp-easy
+go run main.go help
 ```
+
+## Completeness checklist
+
+| Item | Status |
+|------|--------|
+| Tests | ✅ arrays-strings/easy only; other packages have no `*_test.go` |
+| Runner | ✅ `main.go` in this folder (CLI: `go run main.go <command>`) |
+| README | ✅ This file; module structure and run commands documented |
+
+---
 
 ## 🌟 **Real-World Problem Mapping**
 
