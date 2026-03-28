@@ -15,6 +15,7 @@ This project provides a complete learning path for Data Structures and Algorithm
 ## 📚 Learning Path
 
 ### Phase 1: Fundamentals (✅ Complete)
+
 - **Time & Space Complexity Analysis**
 - **Big O Notation with practical examples**
 - **Performance Benchmarking in Go**
@@ -23,20 +24,22 @@ This project provides a complete learning path for Data Structures and Algorithm
 ### Phase 2: Data Structures (✅ Complete)
 
 #### Linear Data Structures
+
 - **Arrays & Slices**: Dynamic arrays with generic implementations
 - **Stacks**: LIFO operations with multiple implementations
 - **Queues**: FIFO operations including priority queues
 - **Linked Lists**: Singly, doubly, and circular variants
 
 #### Non-Linear Data Structures
-- **Binary Trees**: Complete tree operations and traversals
-- **Binary Search Trees**: Self-balancing operations
-- **Heaps**: Min/max heaps with priority queue implementation
-- **Hash Tables**: Efficient key-value storage with collision handling
 
-### Phase 3: Algorithms (75% Complete)
+- **Binary Trees**: Complete tree operations and traversals
+- **Binary Search Trees**: Ordered operations
+- **Heaps**: Min/max heaps with priority queue implementation
+
+### Phase 3: Algorithms (✅ Complete)
 
 #### Graph Algorithms (✅ Complete)
+
 - **Graph Representations**: Adjacency list and matrix
 - **Traversal**: DFS and BFS with complete result tracking
 - **Shortest Paths**: Dijkstra's algorithm with priority queue
@@ -44,12 +47,14 @@ This project provides a complete learning path for Data Structures and Algorithm
 - **Union-Find**: Disjoint set with path compression
 
 #### Sorting Algorithms (✅ Complete)
+
 - **Comparison-based**: QuickSort (3 variants), MergeSort, HeapSort, InsertionSort, SelectionSort, BubbleSort, IntroSort
 - **Non-comparison**: CountingSort, RadixSort, BucketSort
 - **Performance Analysis**: Comprehensive benchmarks vs Go standard library
 - **Utility Functions**: Array generators, sorting validation, statistics tracking
 
 #### Dynamic Programming (✅ Complete)
+
 - **Classic Problems**: Fibonacci, 0/1 Knapsack, Unbounded Knapsack
 - **String DP**: Longest Common Subsequence, Edit Distance, Palindrome problems
 - **Array DP**: Longest Increasing Subsequence (O(n²) and O(n log n))
@@ -57,39 +62,46 @@ This project provides a complete learning path for Data Structures and Algorithm
 - **Advanced**: Memoization vs Tabulation, Space optimization techniques
 
 #### String Algorithms (✅ Complete)
+
 - **Pattern Matching**: KMP, Rabin-Karp, Boyer-Moore, Z-algorithm, Naive search
 - **String Processing**: Trie data structure with prefix operations
 - **Hash Functions**: Custom string hashing, FNV hash, Rolling hash
 - **Advanced**: Manacher's algorithm, Longest Common Prefix, String utilities
 
 #### Backtracking Algorithms (✅ Complete)
+
 - **Classic Problems**: N-Queens (all/single solutions), Sudoku solver with generation
 - **Combinatorial**: Permutations, combinations, subsets (power set)
 - **Constraint Satisfaction**: Graph coloring, maze solving
 - **Advanced**: Knight's tour, Word break problem, optimization techniques
 
-#### Search & Other Algorithms (📅 Next)
-- **Advanced Search**: A*, IDA*, Binary search variations
-- **Number Theory**: Prime algorithms, GCD/LCM, modular arithmetic
-- **Geometric**: Convex hull, line intersection, closest pair
+#### Search, Number Theory & Optimization (✅ Complete – see 04-advanced-topics)
+
+- **Advanced Search**: Binary search variants (lower/upper bound, rotated array), ternary, exponential, interpolation search
+- **Number Theory**: Sieve, primality tests, modular arithmetic, GCD, factorization, CRT
+- **Optimization**: Golden section, ternary search, bisection, root finding
+
+#### Practice Problems (✅ Complete – see 05-practice-problems)
+
+- **70+ problems** by category: arrays/strings, data structures, graphs, DP, backtracking
+- **CLI runner** in `05-practice-problems` (separate Go module)
 
 ## 📊 Progress Tracking
 
-### Current Status: 7/8 Major Categories Complete (87.5% Overall Progress)
+### Current Status: All 5 Phases Complete
 
-**Completed Modules:**
-- ✅ **Fundamentals**: Complexity analysis and Go optimization techniques
-- ✅ **Data Structures**: Linear and non-linear structures with comprehensive tests
-- ✅ **Graph Algorithms**: Complete graph operations, MST, shortest paths
-- ✅ **Sorting Algorithms**: All major sorting algorithms with performance analysis
-- ✅ **Dynamic Programming**: Classic DP problems with optimization techniques
-- ✅ **String Algorithms**: Pattern matching, tries, and string processing
-- ✅ **Backtracking**: Constraint satisfaction and combinatorial problems
+**Completed modules:**
 
-**Remaining Modules:**
-- 📅 **Advanced Search & Number Theory**: A*, binary search variations, prime algorithms
+- ✅ **01-fundamentals**: Complexity analysis and Go optimization techniques
+- ✅ **02-data-structures**: Linear and non-linear structures with comprehensive tests
+- ✅ **03-algorithms**: Graphs, sorting, DP, string algorithms, backtracking (with examples per topic)
+- ✅ **04-advanced-topics**: Search variants, number theory, numerical optimization
+- ✅ **05-practice-problems**: 70+ problems with CLI runner (tests in arrays-strings/easy; more can be added)
 
-### Milestone Achievements:
+**Follow the path:** See **[LEARNING_PATH.md](LEARNING_PATH.md)** for the recommended order and how to verify each phase.
+
+### Milestone Achievements
+
 - [x] 650+ comprehensive unit tests across all modules
 - [x] Performance benchmarks for all algorithms
 - [x] Complete documentation with learning guides
@@ -102,60 +114,59 @@ This project provides a complete learning path for Data Structures and Algorithm
 dsa-mastery/
 ├── 01-fundamentals/               # Complexity analysis and Go optimization
 │   ├── complexity.go              # Time/space complexity examples
-│   ├── benchmarking.go            # Performance measurement tools
 │   ├── complexity_test.go         # Comprehensive tests
+│   ├── main.go                    # Local demo (use examples/fundamentals/main.go to run)
+│   ├── complexity-analysis.md     # Learning guide
 │   └── README.md                  # Fundamentals guide
 │
 ├── 02-data-structures/
 │   ├── linear/                    # Sequential data structures
 │   │   ├── arrays.go              # Dynamic arrays and slices
-│   │   ├── stacks.go              # LIFO implementations
-│   │   ├── queues.go              # FIFO and priority queues
+│   │   ├── stack.go               # LIFO implementations
+│   │   ├── queue.go               # FIFO and priority queues
 │   │   ├── linked_list.go         # All linked list variants
-│   │   └── *_test.go              # Comprehensive test suites
+│   │   └── *_test.go             # Comprehensive test suites
 │   │
 │   └── non-linear/                # Hierarchical structures
-│       ├── trees.go               # Binary tree operations
-│       ├── bst.go                 # Binary search tree
-│       ├── heaps.go               # Min/max heap implementations
-│       ├── hash_table.go          # Hash table with collision handling
-│       └── *_test.go              # Full test coverage
+│       ├── tree.go                # Binary tree, BST, heap, generic BST
+│       └── tree_test.go           # Full test coverage
 │
-└── 03-algorithms/
-    ├── graphs/                    # Graph algorithms
-    │   ├── graph.go               # Graph interface and implementations
-    │   ├── traversal.go           # DFS and BFS algorithms
-    │   ├── shortest_path.go       # Dijkstra's algorithm
-    │   ├── mst.go                 # MST algorithms and Union-Find
-    │   ├── *_test.go              # Comprehensive test suites
-    │   └── README.md              # Graph algorithms guide
-    │
-    ├── sorting/                   # Sorting algorithms
-    │   ├── sorting.go             # All sorting algorithm implementations
-    │   ├── sorting_test.go        # Comprehensive test suite
-    │   └── README.md              # Sorting algorithms guide
-    │
-    ├── dynamic-programming/       # Dynamic Programming algorithms
-    │   ├── dp.go                  # All DP algorithm implementations
-    │   ├── dp_test.go             # Comprehensive test suite
-    │   └── README.md              # DP algorithms guide
-    │
-    ├── string-algorithms/         # String processing algorithms
-    │   ├── string_algorithms.go   # Pattern matching and string operations
-    │   ├── string_algorithms_test.go # Comprehensive test suite
-    │   └── README.md              # String algorithms guide
-    │
-    └── backtracking/              # Backtracking algorithms
-        ├── backtracking.go        # All backtracking implementations
-        ├── backtracking_test.go   # Comprehensive test suite
-        └── README.md              # Backtracking algorithms guide
+├── 03-algorithms/                 # See 03-algorithms/README.md for full tree
+│   ├── graphs/
+│   ├── sorting/
+│   ├── dynamic-programming/
+│   ├── string-algorithms/
+│   └── backtracking/
+│
+├── 04-advanced-topics/            # Search, number theory, optimization
+│   ├── search/
+│   ├── number-theory/
+│   └── optimization/
+│
+├── 05-practice-problems/          # Separate Go module; run from that directory
+│   ├── main.go                    # CLI: go run main.go <command>
+│   ├── arrays-strings/
+│   ├── data-structures/
+│   ├── graphs/
+│   ├── dynamic-programming/
+│   └── backtracking/
+│
+└── examples/                      # Runnable demos (go run examples/<name>/main.go)
+    ├── fundamentals/
+    ├── data-structures/
+    ├── sorting/
+    ├── graphs/
+    ├── dynamic-programming/
+    ├── string-algorithms/
+    ├── backtracking/
+    └── advanced-topics/
 ```
-
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Go 1.21+ (uses generics for type safety)
+
+- Go 1.24+ (uses generics for type safety)
 - Basic understanding of Go syntax
 
 ### Installation
@@ -168,18 +179,21 @@ cd dsa-mastery
 # Initialize Go module
 go mod init dsa-mastery
 
-# Run all tests to verify setup
+# Run all tests (root module only; 05-practice-problems has its own module)
 go test ./...
 
 # Run benchmarks
 go test -bench=. -benchmem ./...
 ```
 
+**Note:** `05-practice-problems` is a separate Go module. Run its tests with `cd 05-practice-problems && go test ./...`.
+
 ### 🏃‍♂️ Running Individual Modules
 
 Most source files (like `complexity.go`) are packages, not directly executable. Here are three ways to run and explore each module:
 
 #### Option 1: Run Interactive Examples (Recommended)
+
 ```bash
 # Fundamentals - Complexity Analysis
 go run examples/fundamentals/main.go
@@ -192,9 +206,22 @@ go run examples/graphs/main.go
 
 # Sorting Algorithms Demo
 go run examples/sorting/main.go
+
+# Dynamic Programming Demo
+go run examples/dynamic-programming/main.go
+
+# String Algorithms Demo
+go run examples/string-algorithms/main.go
+
+# Backtracking Demo
+go run examples/backtracking/main.go
+
+# Advanced Topics (search, number theory)
+go run examples/advanced-topics/main.go
 ```
 
 #### Option 2: Run Module Tests
+
 ```bash
 # Run fundamentals tests
 go test ./01-fundamentals/ -v
@@ -208,6 +235,7 @@ go test -run TestBinarySearch -v ./01-fundamentals
 ```
 
 #### Option 3: Run Performance Benchmarks
+
 ```bash
 # Run fundamentals benchmarks
 go test ./01-fundamentals/ -bench=. -benchmem
@@ -229,24 +257,24 @@ package main
 import (
     "fmt"
     "dsa-mastery/02-data-structures/linear"
-    "dsa-mastery/02-data-structures/non-linear"
+    nonlinear "dsa-mastery/02-data-structures/non-linear"
 )
 
 func main() {
-    // Generic stack
+    // Generic stack (linear)
     stack := linear.NewGenericStack[int]()
     stack.Push(1)
     stack.Push(2)
     value, _ := stack.Pop() // value = 2
 
-    // Binary Search Tree
-    bst := nonlinear.NewBST()
+    // Binary Search Tree (non-linear)
+    bst := nonlinear.NewBinarySearchTree()
     bst.Insert(10)
     bst.Insert(5)
     bst.Insert(15)
     found := bst.Search(10) // true
 
-    // Min Heap
+    // Min Heap (non-linear)
     heap := nonlinear.NewMinHeap()
     heap.Insert(20)
     heap.Insert(10)
@@ -312,9 +340,18 @@ BenchmarkDijkstra-11                 60226    19689 ns/op   7271 B/op   42 alloc
 BenchmarkKruskal-11                  68161    17419 ns/op  19686 B/op   56 allocs/op
 ```
 
-## � Learning Resources
+## 📖 Learning path and root docs
 
-### Documentation
+| Doc | Purpose |
+|-----|--------|
+| **[LEARNING_PATH.md](LEARNING_PATH.md)** | **Start here.** Ordered path (01 → 05), verify commands, and example runs. |
+| [GOLANG_LEARNING_GUIDE.md](GOLANG_LEARNING_GUIDE.md) | Go language primer (syntax, env, concurrency) – use if you're new to Go. |
+| [QUICK_REFERENCE.md](QUICK_REFERENCE.md) | Code patterns and complexity cheat sheet. |
+| [IMPROVEMENT_PLAN.md](IMPROVEMENT_PLAN.md) | Backlog of improvements and test coverage. |
+| [PROGRESS.md](PROGRESS.md) | High-level completion report and stats. |
+
+### Documentation (in-repo)
+
 - Each module includes comprehensive README files
 - Inline code documentation with examples
 - Test files serve as usage examples
@@ -322,17 +359,20 @@ BenchmarkKruskal-11                  68161    17419 ns/op  19686 B/op   56 alloc
 ### Key Concepts Covered
 
 #### Complexity Analysis
+
 - Big O notation with practical examples
 - Time vs Space complexity trade-offs
 - Amortized analysis for advanced data structures
 
 #### Implementation Patterns
-- Generic programming with Go 1.21+ generics
+
+- Generic programming with Go 1.24+ generics
 - Interface-based design for flexibility
 - Error handling with Go idioms
 - Memory-efficient implementations
 
 #### Algorithm Design
+
 - Recursive vs iterative approaches
 - Divide and conquer strategies
 - Dynamic programming foundations
@@ -341,18 +381,21 @@ BenchmarkKruskal-11                  68161    17419 ns/op  19686 B/op   56 alloc
 ## 🏆 Features
 
 ### Production Ready
+
 - **Comprehensive Error Handling**: Proper error types and messages
 - **Memory Efficient**: Optimized for minimal allocations
 - **Thread Safety**: Where applicable, with proper synchronization
 - **Generic Types**: Type-safe implementations using Go generics
 
 ### Educational Value
+
 - **Step-by-step Implementation**: Clear, readable code with comments
 - **Multiple Approaches**: Different solutions for learning comparison
 - **Real-world Examples**: Practical applications of each algorithm
 - **Progressive Complexity**: From basic to advanced implementations
 
 ### Performance Optimized
+
 - **Benchmarked**: All implementations include performance benchmarks
 - **Profiled**: Memory and CPU usage optimization
 - **Scalable**: Tested with various input sizes
@@ -361,18 +404,21 @@ BenchmarkKruskal-11                  68161    17419 ns/op  19686 B/op   56 alloc
 ## 🎓 Use Cases
 
 ### Interview Preparation
+
 - Complete coverage of common DSA interview questions
 - Multiple implementation approaches for flexibility
 - Time/space complexity analysis for each solution
 - Real interview question examples and solutions
 
 ### Educational Projects
+
 - University course assignments and projects
 - Self-study and skill development
 - Teaching material for algorithms courses
 - Code review and best practices examples
 
 ### Production Development
+
 - Reusable components for Go applications
 - Performance-critical algorithm implementations
 - Reference implementations for complex algorithms
@@ -381,12 +427,14 @@ BenchmarkKruskal-11                  68161    17419 ns/op  19686 B/op   56 alloc
 ## 🔬 Advanced Topics
 
 ### Optimization Techniques
+
 - **Path Compression**: Union-Find optimization
 - **Priority Queues**: Heap-based efficient implementations
 - **Memory Pooling**: Reducing allocation overhead
 - **Cache-friendly**: Data structure layout optimization
 
 ### Go-Specific Optimizations
+
 - **Slice Management**: Efficient slice operations and growth
 - **Interface Usage**: When to use interfaces vs concrete types
 - **Goroutine Safety**: Concurrent data structure design
@@ -395,12 +443,14 @@ BenchmarkKruskal-11                  68161    17419 ns/op  19686 B/op   56 alloc
 ## 📈 Performance Guidelines
 
 ### Benchmarking Best Practices
+
 1. **Consistent Environment**: Run benchmarks on consistent hardware
 2. **Multiple Runs**: Average results across multiple benchmark runs
 3. **Memory Profiling**: Monitor allocations and GC pressure
 4. **Real-world Data**: Test with realistic input sizes and patterns
 
 ### Optimization Strategies
+
 1. **Algorithm Choice**: Select optimal algorithm for use case
 2. **Data Structure Selection**: Match structure to access patterns
 3. **Memory Management**: Minimize allocations and copying
@@ -409,12 +459,14 @@ BenchmarkKruskal-11                  68161    17419 ns/op  19686 B/op   56 alloc
 ## 🤝 Contributing
 
 ### Code Standards
+
 - Follow Go conventions and gofmt formatting
 - Include comprehensive tests for new implementations
 - Add benchmarks for performance-critical code
 - Update documentation for new features
 
 ### Testing Requirements
+
 - Unit tests with >95% coverage
 - Benchmark tests for performance validation
 - Edge case testing for robustness
