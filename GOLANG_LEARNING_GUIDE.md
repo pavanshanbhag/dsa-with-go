@@ -218,6 +218,10 @@ func main() {
     for i := 0; i < 5; i++ {
         fmt.Printf("Iteration %d\n", i)
     }
+    // Go 1.22+: range over integer
+    for i := range 5 {
+        fmt.Printf("Range iteration %d\n", i) // 0, 1, 2, 3, 4
+    }
     
     // switch statement
     day := "Monday"
@@ -271,6 +275,8 @@ func main() {
 }
 ```
 
+**Tip (Go 1.22+):** Use `for i := range n` to iterate 0..n-1, and the **`slices`** package (`slices.Contains`, `slices.Sort`, `slices.Clone`, etc.) for common slice operations without writing loops.
+
 **Tasks:**
 
 - [ ] Implement array sorting without built-in functions
@@ -314,6 +320,8 @@ func main() {
     }
 }
 ```
+
+**Tip (Go 1.21+):** The **`maps`** package provides `maps.Keys(m)`, `maps.Values(m)`, and `maps.Clone(m)` for keys, values, or a copy of a map (useful with generics).
 
 **Tasks:**
 
@@ -769,7 +777,7 @@ func main() {
 
 ### Week 7: Generics and Reflection
 
-#### Day 43-45: Go Generics (Go 1.18+, 1.24+ recommended)
+#### Day 43-45: Go Generics (Go 1.18+, 1.25+ recommended)
 
 **Concepts to Learn:**
 
@@ -788,7 +796,8 @@ import (
     "fmt"
 )
 
-// Generic function using cmp.Ordered (Go 1.24+)
+// Generic function using cmp.Ordered (Go 1.25+)
+// Note: Go has built-in max() and min() since 1.21; this example shows how generics work.
 func Max[T cmp.Ordered](a, b T) T {
     if a > b {
         return a
@@ -830,9 +839,20 @@ func main() {
 }
 ```
 
+**Modern Go 1.22–1.25 (quick reference):**
+
+| Feature | Description | Example |
+|--------|-------------|--------|
+| **Built-in `max` / `min`** | Compare two ordered values (since 1.21) | `x := max(5, 10)` |
+| **`clear`** | Zero slice elements or delete all map entries (1.21) | `clear(s)` or `clear(m)` |
+| **`for i := range n`** | Loop from 0 to n-1 (1.22) | `for i := range 10 { ... }` |
+| **`slices` package** | Contains, Sort, SortFunc, Clone, etc. | `slices.Contains(s, 42)` |
+| **`maps` package** | Keys, Values, Clone (1.21) | `keys := maps.Keys(myMap)` |
+| **`iter` package** | Iterators for `for range` (1.23) | Custom iterators; see [pkg.go.dev/iter](https://pkg.go.dev/iter) |
+| **Generic type aliases** | Parameterized type aliases (1.24+) | `type Vec[T any] = []T` |
+
 **Tasks:**
 
-- [ ] Implement generic data structures (list, map, set)
 - [ ] Create utility functions with type constraints
 - [ ] Build a generic sorting library
 - [ ] Practice with complex type constraints
@@ -1265,7 +1285,7 @@ func main() {
 
 ```dockerfile
 # Dockerfile
-FROM golang:1.24-alpine AS builder
+FROM golang:1.25-alpine AS builder
 
 WORKDIR /app
 COPY go.mod go.sum ./
@@ -1687,4 +1707,4 @@ Happy coding! 🚀
 ---
 
 *Last updated: February 2026*  
-*Go version: 1.24+*
+*Go version: 1.25+*

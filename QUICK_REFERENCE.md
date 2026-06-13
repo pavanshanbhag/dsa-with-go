@@ -2,7 +2,7 @@
 
 ## 🚀 Common Patterns & Idioms
 
-### 1. Generic Data Structures (Go 1.24+)
+### 1. Generic Data Structures (Go 1.25+)
 
 ```go
 // Type-safe stack

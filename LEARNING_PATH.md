@@ -6,7 +6,7 @@ Follow this path in order to master Data Structures and Algorithms in Go. Each p
 
 ## Prerequisites
 
-- **Go 1.24+** installed ([go.dev/dl](https://go.dev/dl/))
+- **Go 1.25+** installed ([go.dev/dl](https://go.dev/dl/))
 - **Go basics**: syntax, functions, structs, slices, error handling  
   → If you're new to Go, start with [GOLANG_LEARNING_GUIDE.md](GOLANG_LEARNING_GUIDE.md) (Phases 1–2) or any Go tutorial.
 

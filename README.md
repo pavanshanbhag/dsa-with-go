@@ -162,28 +162,30 @@ dsa-mastery/
     └── advanced-topics/
 ```
 
+*Note: The `playground/` folder is out of scope for the course and is not part of the learning path or test suite.*
+
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- Go 1.24+ (uses generics for type safety)
+- Go 1.25+ (uses generics for type safety)
 - Basic understanding of Go syntax
 
 ### Installation
 
 ```bash
-# Clone the repository  
+# Clone the repository
 git clone https://github.com/your-username/dsa-mastery.git
 cd dsa-mastery
 
-# Initialize Go module
-go mod init dsa-mastery
+# Fetch dependencies (optional; repo already has go.mod)
+go mod tidy
 
-# Run all tests (root module only; 05-practice-problems has its own module)
-go test ./...
+# Run all tests (root module: 01–04 and examples; excludes playground and 05-practice-problems)
+go test ./01-fundamentals/ ./02-data-structures/... ./03-algorithms/... ./04-advanced-topics/...
 
-# Run benchmarks
-go test -bench=. -benchmem ./...
+# Run benchmarks (same paths as above)
+go test ./01-fundamentals/ ./02-data-structures/... ./03-algorithms/... ./04-advanced-topics/... -bench=. -benchmem
 ```
 
 **Note:** `05-practice-problems` is a separate Go module. Run its tests with `cd 05-practice-problems && go test ./...`.
@@ -340,15 +342,22 @@ BenchmarkDijkstra-11                 60226    19689 ns/op   7271 B/op   42 alloc
 BenchmarkKruskal-11                  68161    17419 ns/op  19686 B/op   56 allocs/op
 ```
 
-## 📖 Learning path and root docs
+## 📖 Documentation (root)
+
+**For learners (follow in order):**
 
 | Doc | Purpose |
 |-----|--------|
 | **[LEARNING_PATH.md](LEARNING_PATH.md)** | **Start here.** Ordered path (01 → 05), verify commands, and example runs. |
-| [GOLANG_LEARNING_GUIDE.md](GOLANG_LEARNING_GUIDE.md) | Go language primer (syntax, env, concurrency) – use if you're new to Go. |
+| [GOLANG_LEARNING_GUIDE.md](GOLANG_LEARNING_GUIDE.md) | Go language primer – use if you're new to Go. |
 | [QUICK_REFERENCE.md](QUICK_REFERENCE.md) | Code patterns and complexity cheat sheet. |
-| [IMPROVEMENT_PLAN.md](IMPROVEMENT_PLAN.md) | Backlog of improvements and test coverage. |
-| [PROGRESS.md](PROGRESS.md) | High-level completion report and stats. |
+
+**Reference / maintainers:**
+
+| Doc | Purpose |
+|-----|--------|
+| [PROGRESS.md](PROGRESS.md) | Completion status and phase summary. |
+| [IMPROVEMENT_PLAN.md](IMPROVEMENT_PLAN.md) | Backlog (tests, docs, consistency). |
 
 ### Documentation (in-repo)
 
@@ -366,7 +375,7 @@ BenchmarkKruskal-11                  68161    17419 ns/op  19686 B/op   56 alloc
 
 #### Implementation Patterns
 
-- Generic programming with Go 1.24+ generics
+- Generic programming with Go 1.25+ generics
 - Interface-based design for flexibility
 - Error handling with Go idioms
 - Memory-efficient implementations
