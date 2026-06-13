@@ -106,11 +106,9 @@ This runs demos for advanced search, number theory, mathematical optimization (u
 |------|--------|
 | Tests | ✅ number-theory, ✅ search, ✅ optimization |
 | Example runner | ✅ `examples/advanced-topics/main.go` (uses search + number_theory) |
-| README per subfolder | ❌ search/number-theory/optimization have no READMEs; parent README describes content |
+| README per subfolder | ✅ search/, number-theory/, optimization/ each have README.md with verify commands |
 
 ---
-
-## 🏆 Real-World Applications
 
 ## 🏆 Real-World Applications
 

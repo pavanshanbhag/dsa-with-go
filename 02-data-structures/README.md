@@ -71,7 +71,7 @@ Each data structure includes:
 ## 🚀 Go-Specific Features
 
 - **Interface-based Design**: Clean abstractions and polymorphism
-- **Generic Implementations**: Type-safe collections using Go 1.24+ generics
+- **Generic Implementations**: Type-safe collections using Go 1.25+ generics
 - **Memory Efficiency**: Zero-allocation techniques where possible
 - **Concurrent Safety**: Mutex-protected versions for multi-threaded access
 - **Channel Integration**: Go-idiomatic implementations using channels
